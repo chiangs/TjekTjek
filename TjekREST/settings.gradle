@@ -1,0 +1,2 @@
+rootProject.name = 'TjekREST'
+includeFlat 'TjekJPA'
