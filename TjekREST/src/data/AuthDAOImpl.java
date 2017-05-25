@@ -36,7 +36,7 @@ public class AuthDAOImpl implements AuthDAO {
 	public User authenticateUser(User u) throws NoResultException {
 		String query = "SELECT u from User u WHERE u.email = :email";
 		User managedUser = em.createQuery(query, User.class).setParameter("email", u.getEmail()).getSingleResult();
-		if (encoder.matches(u.getPassword(), managedUser.getPassword()) && managedUser.isStatus()) {
+		if (encoder.matches(u.getPassword(), managedUser.getPassword()) && !managedUser.isStatus()) {
 			return managedUser;
 		} else {
 			System.out.println("in null");
