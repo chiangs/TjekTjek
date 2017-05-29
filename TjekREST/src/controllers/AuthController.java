@@ -14,7 +14,7 @@ import com.tjek.entities.User;
 import data.AuthDAO;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/auth/")
 public class AuthController {
 	
 	@Autowired
@@ -25,27 +25,27 @@ public class AuthController {
 		return "PONG!";
 	}
 	
-	@RequestMapping(path = "/register", method = RequestMethod.POST)
+	@RequestMapping(path = "register", method = RequestMethod.POST)
 	public User register(HttpSession session, @RequestBody User user) {
 		User newUser = authDAO.register(user);
 		session.setAttribute("sessionUser", newUser);
 		return newUser;
 	}
 	
-	@RequestMapping(path = "/login", method = RequestMethod.POST)
+	@RequestMapping(path = "login", method = RequestMethod.POST)
 	public User login(HttpSession session, @RequestBody User user) {
 		User sessionUser = authDAO.authenticateUser(user);
 		session.setAttribute("sessionUser", sessionUser);
 		return sessionUser;
 	}
 	
-	@RequestMapping(path = "/logout", method = RequestMethod.POST)
+	@RequestMapping(path = "logout", method = RequestMethod.POST)
 	public Boolean logout(HttpSession session, HttpServletResponse res) {
 		session.removeAttribute("sessionUser");
 		return true;
 	}
 	
-	@RequestMapping(path = "/unauthorized")
+	@RequestMapping(path = "unauthorized")
 	public String unauth(HttpServletResponse res) {
 		res.setStatus(401);
 		return "unauthorized";

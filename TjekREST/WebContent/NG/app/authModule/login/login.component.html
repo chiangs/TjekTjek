@@ -1,0 +1,81 @@
+<div class="modal-dialog" ng-hide="vm.showRegForm">
+	<div class="modal-content">
+		<div class="modal-heading">
+			<h2 class="text-center">Welcome, Supreme Allied Commander of
+				Incomplete Task Annihilation Forces</h2>
+			<div class="modal-body">
+				<form class="form" id="modal-login">
+					<div class="form-group"><h3>Email</h3>
+						<div class="input-group">
+							<span class="input-group-addon"> <span
+								class="glyphicon glyphicon-user"></span>
+							</span> <input type="email" class="form-control"
+								placeholder="email@mail.com" ng-model="user.email" required>
+						</div>
+					</div>
+					
+					<div class="form-group"><h3>Password</h3>
+						<div class="input-group">
+							<span class="input-group-addon"> <span
+								class="glyphicon glyphicon-user"></span>
+							</span> <input type="{{ vm.showPassword ? 'text' : 'password' }}" class="form-control"
+								placeholder="password" ng-model="user.password" required>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary btn-lg" ng-click="vm.login(user)">Start destroying them to-dos!</button>
+					</div>
+					
+					<div class="form-group">
+						<button type="submit" class="btn btn-warning btn-lg" ng-click="vm.showRegFormButton()">Start destroying them to-dos!</button>
+					</div>		
+					
+					<a href="mailto:stephen.e.chiang@gmail.com" target="_blank">Trouble logging in? Click Here for Reinforcements</a>		
+					
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+"
+<div class="modal-dialog" ng-show="vm.showRegForm">
+	<div class="modal-content">
+		<div class="modal-heading">
+			<h2 class="text-center">Welcome, Supreme Allied Commander of
+				Incomplete Task Annihilation Forces</h2>
+			<div class="modal-body">
+				<form class="form" id="modal-login">
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon"> <span
+								class="glyphicon glyphicon-user"></span>
+							</span> <input type="email" class="form-control"
+								placeholder="User Email Address" ng-model="user.email" required>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon"> <span
+								class="glyphicon glyphicon-user"></span>
+							</span> <input type="password" class="form-control"
+								placeholder="User Password" ng-model="user.password" required>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary btn-lg" ng-click="vm.login(user)">Start destroying them to-dos!</button>
+					</div>
+					
+					<div class="form-group">
+						<button type="submit" class="btn btn-warning btn-lg" ng-click="vm.showRegForm">Start destroying them to-dos!</button>
+					</div>		
+					
+					<a href="mailto:stephen.e.chiang@gmail.com" target="_blank">Trouble logging in? Click Here for Reinforcements</a>		
+					
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
