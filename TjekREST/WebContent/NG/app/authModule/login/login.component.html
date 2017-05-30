@@ -24,15 +24,11 @@
 					</div>
 					
 					<div class="form-group">
-						<button type="submit" class="btn btn-primary btn-lg" ng-click="vm.login(user)">Start destroying them to-dos!</button>
+						<button type="submit" class="btn btn-primary btn-lg" ng-click="vm.login(user)">Start destroying them to-dos</button>
+						<button type="submit" class="btn btn-warning btn-lg" ng-click="vm.showRegFormButton()">Create an account</button>
 					</div>
 					
-					<div class="form-group">
-						<button type="submit" class="btn btn-warning btn-lg" ng-click="vm.showRegFormButton()">Start destroying them to-dos!</button>
-					</div>		
-					
 					<a href="mailto:stephen.e.chiang@gmail.com" target="_blank">Trouble logging in? Click Here for Reinforcements</a>		
-					
 				</form>
 			</div>
 		</div>
@@ -42,10 +38,9 @@
 <div class="modal-dialog" ng-show="vm.showRegForm">
 	<div class="modal-content">
 		<div class="modal-heading">
-			<h2 class="text-center">Welcome, Supreme Allied Commander of
-				Incomplete Task Annihilation Forces</h2>
+			<h2 class="text-center">Create your to-do destroying account!</h2>
 			<div class="modal-body">
-				<form class="form" id="modal-login">
+				<form class="form" id="modal-reg">
 					<div class="form-group">
 						<div class="input-group">
 							<span class="input-group-addon"> <span
@@ -65,15 +60,10 @@
 					</div>
 					
 					<div class="form-group">
-						<button type="submit" class="btn btn-primary btn-lg" ng-click="vm.login(user)">Start destroying them to-dos!</button>
+						<button type="submit" class="btn btn-primary btn-lg" ng-click="vm.login(user)">Submit</button>
 					</div>
-					
-					<div class="form-group">
-						<button type="submit" class="btn btn-warning btn-lg" ng-click="vm.showRegForm">Start destroying them to-dos!</button>
-					</div>		
-					
-					<a href="mailto:stephen.e.chiang@gmail.com" target="_blank">Trouble logging in? Click Here for Reinforcements</a>		
-					
+						
+						<a href="#/" ng-click="vm.reload()">Oops! Back to login.</a>						
 				</form>
 			</div>
 		</div>

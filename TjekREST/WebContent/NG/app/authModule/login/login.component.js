@@ -4,6 +4,7 @@ angular.module('authModule').component('login', {
 		var vm = this;
 		vm.error = null;
 		vm.showRegForm = false;
+		vm.showLogForm = true;
 		
 		vm.login = function(user) {
 			console.log('in login');
@@ -16,6 +17,11 @@ angular.module('authModule').component('login', {
 		
 		vm.showRegFormButton = function() {
 			vm.showRegForm = true;
+			vm.showLogForm = false;
+		}
+		
+		vm.reload = function() {
+			window.location.reload();
 		}
 		
 		
