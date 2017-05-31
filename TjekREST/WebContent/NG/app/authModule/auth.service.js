@@ -34,6 +34,30 @@ angular.module('authModule').factory('authService', function($http, $cookies, $l
 		})
 	}
 	
+	service.register = function(user) {
+		return $http({
+			method : 'POST',
+			url : BASE_URL + 'register',
+			headers : {
+				'Content-Type' : 'application/json' 
+			},
+			data : user
+		}).then(function(res){
+			console.log(res.data);
+			saveToken(data.res);
+			$location.path(res.data.id+'/todo');
+		})
+	}
+	
+	service.logout = function() {
+		return $http({
+			method : 'POST',
+			url : BASE_URL + 'logout'
+		}).then(function(res){
+			removeToken(res.data);
+		})
+	}
+	
 	
 	return service;
 })
