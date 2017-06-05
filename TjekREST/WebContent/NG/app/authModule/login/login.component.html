@@ -1,7 +1,7 @@
 <div class="modal-dialog" ng-hide="vm.showRegForm">
 	<div class="modal-content">
 		<div class="modal-heading">
-			<h2 class="text-center">Welcome, Supreme Allied Commander of
+			<h2 class="text-center">Velkommen, Supreme Allied Commander of
 				Incomplete Task Annihilation Forces</h2>
 			<div class="modal-body">
 				<form class="form" id="modal-login">
@@ -19,16 +19,16 @@
 							<span class="input-group-addon"> <span
 								class="glyphicon glyphicon-user"></span>
 							</span> <input type="{{ vm.showPassword ? 'text' : 'password' }}" class="form-control"
-								placeholder="password" ng-model="user.password" required>
+								placeholder="adgangskode" ng-model="user.password" required>
 						</div>
 					</div>
 					
 					<div class="form-group">
-						<button type="submit" class="btn btn-primary btn-lg" ng-click="vm.login(user)">Login, and start destroying to-dos</button>
-						<button type="submit" class="btn btn-warning btn-lg" ng-click="vm.showRegFormButton()">Create an account</button>
+						<button type="submit" class="btn btn-primary btn-lg" ng-click="vm.login(user)">Log på, og starte at ødelægge to-do'er</button>
+						<button type="submit" class="btn btn-warning btn-lg" ng-click="vm.showRegFormButton()">Opret en konto</button>
 					</div>
 					
-					<a href="mailto:stephen.e.chiang@gmail.com" target="_blank">Trouble logging in? Click Here for Reinforcements</a>		
+					<a href="mailto:stephen.e.chiang@gmail.com" target="_blank">Har du brug for hjælp? Klik her for forstærkninger!</a>		
 				</form>
 			</div>
 		</div>
@@ -38,7 +38,7 @@
 <div class="modal-dialog" ng-show="vm.showRegForm">
 	<div class="modal-content">
 		<div class="modal-heading">
-			<h2 class="text-center">Create your to-do destroying account!</h2>
+			<h2 class="text-center">Opret din konto.</h2>
 			<div class="modal-body">
 				<form class="form" id="modal-reg">
 					<div class="form-group">
@@ -46,7 +46,7 @@
 							<span class="input-group-addon"> <span
 								class="glyphicon glyphicon-user"></span>
 							</span> <input type="email" class="form-control"
-								placeholder="User Email Address" ng-model="user.email" required>
+								placeholder="Bruger Email Adresse" ng-model="user.email" required>
 						</div>
 					</div>
 					
@@ -55,15 +55,15 @@
 							<span class="input-group-addon"> <span
 								class="glyphicon glyphicon-user"></span>
 							</span> <input type="password" class="form-control"
-								placeholder="User Password" ng-model="user.password" required>
+								placeholder="Adgangskode" ng-model="user.password" required>
 						</div>
 					</div>
 					
 					<div class="form-group">
-						<button type="submit" class="btn btn-primary btn-lg" ng-click="vm.login(user)">Submit</button>
+						<button type="submit" class="btn btn-primary btn-lg" ng-click="vm.login(user)">Tilmelde</button>
 					</div>
 						
-						<a href="#/" ng-click="vm.reload()">Oops! Back to login.</a>						
+						<a href="#/" ng-click="vm.reload()">Ups! Tilbage til logind.</a>						
 				</form>
 			</div>
 		</div>
