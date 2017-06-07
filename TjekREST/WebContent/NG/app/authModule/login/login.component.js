@@ -8,8 +8,8 @@ angular.module('authModule').component('login', {
 		
 		vm.login = function(user) {
 			console.log('in login');
-			authService.login(user).then(function() {
-				$location.path('/todo')
+			authService.login(user).then(function(res) {
+				$location.path('/todo/')
 			}).catch(function() {
 				vm.error = 'Problem finding user that matches input. Please check email/password';
 			})
