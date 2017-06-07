@@ -8,5 +8,7 @@ angular.module('appModule', ['authModule', 'nav', 'ngRoute', 'static']).config(
 				template : '<profile></profile>'
 			}).when('/contact', {
 				template : '<contact></contact>'
+			}).otherwise({
+				template : '<error></error>'
 			})
 		})
