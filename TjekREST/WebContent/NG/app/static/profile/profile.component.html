@@ -1,0 +1,32 @@
+<div class="modal-content">
+		<div class="modal-heading">
+			<h2 class="text-center">Opdater kontooplysninger.</h2>
+			<div class="modal-body">
+				<form class="form" id="modal-reg">
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon"> <span
+								class="glyphicon glyphicon-user"></span>
+							</span> <input type="email" class="form-control"
+								placeholder="vm.user.email" ng-model="user.email" required>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon"> <span
+								class="glyphicon glyphicon-user"></span>
+							</span> <input type="password" class="form-control"
+								placeholder="vm.user.password" ng-model="user.password" required>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary btn-lg" ng-click="vm.login(user)">Tilmelde</button>
+					</div>
+						
+						<a href="#/" ng-click="vm.reload()">Ups! Tilbage til logind.</a>						
+				</form>
+			</div>
+		</div>
+	</div> 
