@@ -1,0 +1,34 @@
+<h1>Incomplete Status:</h1>
+
+<div>
+
+	<table class="table" id="todoList" ng-show="vm.showTable">
+		<thead>
+			<tr scope="row">
+				<th>ID</th>
+				<th>Created On</th>
+				<th>Due Date</th>
+				<th>Task</th>
+				<th>Description</th>
+				<th>Status</th>
+				<th>Complete Date</th>
+				<th>Mark</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="td in vm.todos | date:'MM/DD/YYYY' | orderBy:'id'">
+				<td>{{td.id}}</td>
+				<td>{{td.createdAt}}</td>
+				<td>{{td.dueDate}}</td>
+				<td>{{td.task}}</td>
+				<td>{{td.description}}</td>
+				<td>{{td.completed}}</td>
+				<td>{{td.completeDate}}</td>
+				<td><input type="checkbox" name="mark" ng-model="td.completed" ng-change="vm.updateTodo(td)"></td>
+				<td><button type="submit" class="btn btn-danger-sm" ng-click="vm.deleteTodo(td)">x</button></td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>

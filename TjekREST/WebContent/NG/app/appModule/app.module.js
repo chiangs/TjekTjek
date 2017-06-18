@@ -1,8 +1,8 @@
-angular.module('appModule', ['authModule', 'nav', 'ngRoute', 'static']).config(
+angular.module('appModule', ['authModule', 'nav', 'ngRoute', 'static', 'todo']).config(
 		function($routeProvider) {
 			$routeProvider.when('/', {
 				template : '<login></login>'
-			}).when('/todo/', {
+			}).when('/todo', {
 				template : '<todo-list></todo-list>'
 			}).when('/profile', {
 				template : '<profile></profile>'

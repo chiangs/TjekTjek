@@ -17,7 +17,6 @@ import com.tjek.entities.Todo;
 import data.TodoDAO;
 
 @RestController
-@RequestMapping("/user/")
 public class TodoController {
 	
 	@Autowired

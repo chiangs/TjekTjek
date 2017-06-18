@@ -31,6 +31,7 @@ angular.module('authModule').factory('authService', function($http, $cookies, $l
 			data : user
 		}).then(function(res){
 			saveToken(res.data);
+			return res;
 		})
 	}
 	
@@ -45,7 +46,7 @@ angular.module('authModule').factory('authService', function($http, $cookies, $l
 		}).then(function(res){
 			console.log(res.data);
 			saveToken(data.res);
-			$location.path(res.data.id+'/todo');
+			$location.path(res.data.id + '/todo');
 		})
 	}
 	
