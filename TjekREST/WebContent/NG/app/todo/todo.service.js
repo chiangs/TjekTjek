@@ -4,7 +4,7 @@ angular.module('todo').factory(
 			var service = [];
 			var todos = [];
 			
-			var BASE_URL = 'http://localhost:8080/TjekTjek/REST/';
+			var BASE_URL = 'http://localhost:8080/TjekREST/rest/';
 			
 			var competeDate = '';
 			

@@ -10,9 +10,9 @@
 				<th>Due Date</th>
 				<th>Task</th>
 				<th>Description</th>
-				<th>Status</th>
-				<th>Complete Date</th>
+				<th>Status Complete</th>
 				<th>Mark</th>
+				<th>Complete Date</th>
 				<th>Delete</th>
 			</tr>
 		</thead>
@@ -24,8 +24,8 @@
 				<td>{{td.task}}</td>
 				<td>{{td.description}}</td>
 				<td>{{td.completed}}</td>
-				<td>{{td.completeDate}}</td>
 				<td><input type="checkbox" name="mark" ng-model="td.completed" ng-change="vm.updateTodo(td)"></td>
+				<td>{{td.completeDate}}</td>
 				<td><button type="submit" class="btn btn-danger-sm" ng-click="vm.deleteTodo(td)">x</button></td>
 			</tr>
 		</tbody>
