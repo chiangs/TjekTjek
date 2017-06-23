@@ -5,28 +5,25 @@
 	<table class="table" id="todoList" ng-show="vm.showTable">
 		<thead>
 			<tr scope="row">
-				<th>ID</th>
-				<th>Created On</th>
 				<th>Due Date</th>
 				<th>Task</th>
 				<th>Description</th>
 				<th>Status Complete</th>
 				<th>Mark</th>
 				<th>Complete Date</th>
-				<th>Delete</th>
+				<th colspan="2">Handlinger</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="td in vm.todos | date:'MM/DD/YYYY' | orderBy:'id'">
-				<td>{{td.id}}</td>
-				<td>{{td.createdAt}}</td>
+			<tr ng-repeat="td in vm.todos | date:'MM/DD/YYYY' | orderBy:'dueDate'">
 				<td>{{td.dueDate}}</td>
 				<td>{{td.task}}</td>
 				<td>{{td.description}}</td>
 				<td>{{td.completed}}</td>
 				<td><input type="checkbox" name="mark" ng-model="td.completed" ng-change="vm.updateTodo(td)"></td>
 				<td>{{td.completeDate}}</td>
-				<td><button type="submit" class="btn btn-danger-sm" ng-click="vm.deleteTodo(td)">x</button></td>
+				<td class="btn-group"><button type="submit" class="btn btn-warning" ng-click="vm.editTodo(td)">Redigere</button>
+				<button type="submit" class="btn btn-danger" ng-click="vm.deleteTodo(td)">Slette</button></td>
 			</tr>
 		</tbody>
 	</table>

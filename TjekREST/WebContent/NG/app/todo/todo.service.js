@@ -9,7 +9,6 @@ angular.module('todo').factory(
 			var competeDate = '';
 			
 			var checkLogin = function() {
-				console.log('in checklogin')
 				if (!authService.getToken().id) {
 					$location.path('/login');
 				}
@@ -17,12 +16,19 @@ angular.module('todo').factory(
 			
 			service.index = function() {
 				checkLogin();
-				console.log('in service');
 				return $http({
 					method : 'GET',
 					url : BASE_URL + authService.getToken().id + '/todo'
 				}).then(function(res){
 					return res;
+				})
+			}
+			
+			service.destroy = function(tid) {
+				checkLogin();
+				return $http({
+					method : 'DELETE',
+					url : BASE_URL + authService.getToken().id + '/todo/' + tid
 				})
 			}
 			

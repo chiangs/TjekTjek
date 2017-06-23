@@ -8,11 +8,18 @@ angular.module('todo').component('todoList', {
 		vm.selected=null;
 		
 		vm.reload = function(){
-			console.log('in reload');
 			todoService.index().then(function(res){
 				vm.todos = res.data;
 			});
 		}
+		
+		vm.deleteTodo = function(todo){
+			todoService.destroy(todo.id).then(function(res){
+				vm.reload();
+			})
+		}
+		
+		
 		
 		vm.reload();
 	},
