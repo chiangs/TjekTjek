@@ -13,10 +13,10 @@
 		<form class="form-inline my-2 my-lg-0">
 			<input class="form-control mr-sm-2" type="text" placeholder="Søg">
 		</form>
-		
+		<button type="submit" class="btn btn-success" ng-click="vm.showNewTodoForm">Opret en ny opgave</button>
 		
 		<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-			<li class="nav-item"><a class="nav-link" href="#">Hjem</a></li>
+			<li class="nav-item"><a class="nav-link" href="#/todo">Hjem</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">Statistik</a></li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -30,8 +30,15 @@
 			<li class="nav-item dropdown"><a class="nav-link" href="#contact">Kontakt</a></li>
 		</ul>	
 		
-	</div>
-					
+	</div>			
 </nav>
+
+<div id="newTaskForm"> // make this a modal?
+	<form ng-show="vm.showNewTodoForm">
+		<input class="newTaskInput" type="text" ng-model="todos.task" placeholder="Task Name"/><br>
+		<input class="newTaskInput" type="text" ng-model="todos.description" placeholder="Task Description"/><br>
+		<input type="submit" value="Add ToDo" ng-click="vm.addToList(todos); todos={}"/>
+	</form>
+</div>
 
 
