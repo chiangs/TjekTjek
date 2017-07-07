@@ -39,7 +39,7 @@ public class TodoController {
 		return todoDAO.show(uid, tid);
 	}
 	
-	@RequestMapping(path = "{uid}/todo/", method = RequestMethod.POST)
+	@RequestMapping(path = "{uid}/todo", method = RequestMethod.POST)
 	public Todo create(HttpServletRequest req, HttpServletResponse res, @PathVariable int uid, @RequestBody String todoJson){
 		try {
 			return todoDAO.create(uid, todoJson);

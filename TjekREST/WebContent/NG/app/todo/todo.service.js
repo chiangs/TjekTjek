@@ -32,6 +32,22 @@ angular.module('todo').factory(
 				})
 			}
 			
+			service.create = function(todo) {
+				checkLogin();
+				return $http({
+					method : 'POST',
+					url : BASE_URL + authService.getToken.id + '/todo',
+					headers : {
+						'Content-Type' : 'application/json'
+					},
+					data : todo
+				}).then(function(res) {
+					$rootScope.$broadcast('newTodo', { //this needs additional programming for full functionality
+						newTodo : res.data
+					});
+				})
+			}
+			
 			
 			return service;
 		})

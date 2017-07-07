@@ -19,7 +19,12 @@ angular.module('todo').component('todoList', {
 			})
 		}
 		
-		
+		vm.newTodo = function(todo){ //this needs testing and angular coding
+			todoService.create(todo).then(function(res){
+				vm.todo={};
+				vm.reload();
+			})
+		}
 		
 		vm.reload();
 	},
