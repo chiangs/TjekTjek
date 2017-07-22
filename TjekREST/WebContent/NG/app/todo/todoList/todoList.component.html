@@ -1,6 +1,7 @@
 <h1>Incomplete Status:</h1>
 
 <div>
+<todo-show todo="vm.selected" ng-show="vm.selected" go-back="vm.displayTable()" on-update="vm.updateTodo(todo)"></todo-show>
 
 	<table class="table" id="todoList" ng-show="vm.showTable">
 		<thead>
@@ -22,10 +23,11 @@
 				<td>{{td.completed}}</td>
 				<td><input type="checkbox" name="mark" ng-model="td.completed" ng-change="vm.updateTodo(td)"></td>
 				<td>{{td.completeDate}}</td>
-				<td class="btn-group"><button type="submit" class="btn btn-warning" ng-click="vm.editTodo(td)">Redigere</button>
+				<td class="btn-group"><button type="submit" class="btn btn-warning" ng-click="vm.displayTodo(td)">Redigere</button>
 				<button type="submit" class="btn btn-danger" ng-click="vm.deleteTodo(td)">Slette</button></td>
 			</tr>
 		</tbody>
 	</table>
 
 </div>
+

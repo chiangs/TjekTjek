@@ -24,6 +24,15 @@ angular.module('todo').factory(
 				})
 			}
 			
+			service.show = function(id) {
+				checkLogin();
+				return $http({
+					method : 'GET',
+					url : BASE_URL + authService.getToken().id + '/todo/'
+							+ id
+				})
+			}
+			
 			service.destroy = function(tid) {
 				checkLogin();
 				return $http({
@@ -36,7 +45,7 @@ angular.module('todo').factory(
 				checkLogin();
 				return $http({
 					method : 'POST',
-					url : BASE_URL + authService.getToken.id + '/todo',
+					url : BASE_URL + authService.getToken().id + '/todo',
 					headers : {
 						'Content-Type' : 'application/json'
 					},
@@ -48,6 +57,22 @@ angular.module('todo').factory(
 				})
 			}
 			
+			service.update = function(todo) {
+				checkLogin();
+				if (todo.completed == false) {
+					todo.completeDate = '';
+				} else {
+					todo.CompleteDate = $filter('date')(Date.now(), 'MM/dd/yyyy');
+				}
+				return $http({
+					method : 'PUT',
+					url : BASE_URL + authService.getToken().id + '/todo/' + todo.id,
+					headers : {
+						'Content-Type' : 'application/json'
+					},
+					data : todo
+				})
+			}
 			
 			return service;
 		})

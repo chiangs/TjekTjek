@@ -1,0 +1,21 @@
+<div class="focus" ng-hide="vm.editMode">
+<h2>Task: {{vm.todo.task}}</h2>
+<p>Description: {{vm.todo.description}}</p>
+<p>Due Date: {{vm.todo.dueDate}}</p>
+<p>Completed: {{vm.todo.completed}}</p>
+<button type="submit" ng-click="vm.backButton()">Go Back</button>
+<button type="submit" ng-click="vm.setEditTodo()">Edit</button>
+</div>
+
+<div class="editPanel">
+<form class="editForm" ng-show="vm.editMode">
+	<b>Task </b><br><input class="newTaskInput" type="text" ng-model="vm.editTodo.task"/><br>
+	<b>Description </b><br><input class="newTaskInput" type="text" ng-model="vm.editTodo.description"/><br>
+<!-- 	<b>Due Date </b><input class="form-check" type="checkbox" ng-model="vm.editTodo.dueDate"/><br>
+	<b>Completed Date </b><input class="form-check" type="checkbox" ng-model="vm.editTodo.completeDate"/><br> -->
+	<b>Status </b><input class="form-check" type="checkbox" ng-model="vm.editTodo.completed"/><br>
+	<br>
+	<button type="submit" ng-click="vm.saveButton()">Save</button>
+	<button type="submit" ng-click="vm.cancel()">Cancel</button>
+</form>
+</div>
