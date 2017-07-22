@@ -25,7 +25,7 @@ public class UserController {
 		return "PONG!";
 	}
 	
-	@RequestMapping(path = "{uid}/user/{uid}", method = RequestMethod.GET)
+	@RequestMapping(path = "{uid}/user", method = RequestMethod.GET)
 	public User show(HttpServletRequest req, HttpServletResponse res, @PathVariable int uid) {
 		try {
 			res.setStatus(200);
@@ -37,13 +37,13 @@ public class UserController {
 		}
 	}
 
-	@RequestMapping(path = "{uid}/user/{uid}", method = RequestMethod.PUT)
+	@RequestMapping(path = "{uid}/user", method = RequestMethod.PUT)
 	public User update(HttpServletRequest req, HttpServletResponse res, @PathVariable int uid, @RequestBody String userJson) {
 		res.setStatus(200);
 		return userDAO.update(uid, userJson);
 	}
 
-	@RequestMapping(path = "{uid}/user/{uid}", method = RequestMethod.DELETE)
+	@RequestMapping(path = "{uid}/user", method = RequestMethod.DELETE)
 	public Boolean deactivate(HttpServletRequest req, HttpServletResponse res, @PathVariable int uid) {
 		try {
 			res.setStatus(202);

@@ -40,7 +40,6 @@ public class UserDAOImpl implements UserDAO {
 			
 			JsonNode root = mapper.readTree(userJson); 
 			String newPassword = root.at("/password").asText();
-			System.out.println(newPassword);
 			String newPasswordSha = encoder.encode(newPassword); 
 					
 			uUser.setEmail(mUser.getEmail());

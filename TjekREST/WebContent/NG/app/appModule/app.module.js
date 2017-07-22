@@ -1,4 +1,4 @@
-angular.module('appModule', ['authModule', 'nav', 'ngRoute', 'static', 'todo']).config(
+angular.module('appModule', ['authModule', 'nav', 'ngRoute', 'static', 'todo', 'user']).config(
 		function($routeProvider) {
 			$routeProvider.when('/', {
 				template : '<login></login>'

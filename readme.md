@@ -1,11 +1,16 @@
 ### Under Construction, coming soon!
 
 ## Features status
+login
+1. How to handle incorrect login credentials?
+2. Registering, re-enter password
+3. Click to view and hide password entry
+
 User CRUD
 1. Create Account - Done
 2. Encrypted password - Done
-3. Update User Account info - Working on DAO/Controller stubbed
-4. Deactivate User Account - Works, but fix routing if deactivated, fix login if no account. - route to create account
+3. Update User Account info - Done, needs user prompt to confirm changes persisted, and logic to double enter password
+4. Deactivate User Account - Done
 
 To-Do CRUD
 1. Create from any view via modal and persist to DB-
