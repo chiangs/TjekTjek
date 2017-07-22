@@ -42,6 +42,7 @@ public class TodoController {
 	@RequestMapping(path = "{uid}/todo", method = RequestMethod.POST)
 	public Todo create(HttpServletRequest req, HttpServletResponse res, @PathVariable int uid, @RequestBody String todoJson){
 		try {
+			res.setStatus(201);
 			return todoDAO.create(uid, todoJson);
 		} catch (Exception e) {
 			res.setStatus(400);
