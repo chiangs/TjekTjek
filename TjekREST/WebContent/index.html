@@ -2,61 +2,63 @@
 <html lang="en" ng-app="appModule">
 
 <head>
-  <!-- Required meta tags always come first -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>TjekTjek - Make it Doneskis!</title>
+<!-- Required meta tags always come first -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>TjekTjek - Make it Doneskis!</title>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:500,900|Quicksand" rel="stylesheet">
-  <link rel="stylesheet" href="CSS/main.css">
-  <link rel="stylesheet" href="CSS/auth.css">
-  <link rel="stylesheet" href="CSS/contact.css">
-  <link rel="stylesheet" href="CSS/error.css">
+<!-- Bootstrap CSS -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="CSS/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:500,900|Quicksand">
+<link rel="stylesheet" href="CSS/main.css">
+<link rel="stylesheet" href="CSS/auth.css">
+<link rel="stylesheet" href="CSS/contact.css">
+<link rel="stylesheet" href="CSS/error.css">
 
+<!-- JS -->
+<script src="JS/angular.min.js"></script>
+<script src="JS/angular-route.min.js"></script>
+<script src="JS/angular-cookies.min.js"></script>
+<script src="JS/ng-map_min_js.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.16/angular-filter.js"></script>
 
-  <!-- JS -->
-  <script src="JS/angular.min.js"></script>
-  <script src="JS/angular-route.min.js"></script>
-  <script src="JS/angular-cookies.min.js"></script>
-  <script src="JS/ng-map_min_js.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.16/angular-filter.js"></script>
-  
-  <script src="NG/app/authModule/auth.module.js"></script>
-  <script src="NG/app/authModule/auth.service.js"></script>
-  <script src="NG/app/authModule/login/login.component.js"></script>
-  <script src="NG/app/authModule/logout/logout.component.js"></script>
- 
-  <script src="NG/app/nav/nav.module.js"></script>
-  <script src="NG/app/nav/navbar/nav.component.js"></script>
-  
-  <script src="NG/app/static/static.module.js"></script>
-  <script src="NG/app/static/contact/contact.component.js"></script>    
-  <script src="NG/app/static/profile/profile.component.js"></script>    
-  <script src="NG/app/static/error/error.component.js"></script>
-      
-  <script src="NG/app/todo/todo.module.js"></script>    
-  <script src="NG/app/todo/todo.service.js"></script>    
-  <script src="NG/app/todo/todoList/todoList.component.js"></script>    
-  
-  <script src="NG/app/appModule/app.module.js"></script>
-  <script src="NG/app/appModule/appComponent/app.component.js"></script>
+<script src="NG/app/authModule/auth.module.js"></script>
+<script src="NG/app/authModule/auth.service.js"></script>
+<script src="NG/app/authModule/login/login.component.js"></script>
+<script src="NG/app/authModule/logout/logout.component.js"></script>
+
+<script src="NG/app/nav/nav.module.js"></script>
+<script src="NG/app/nav/navbar/nav.component.js"></script>
+
+<script src="NG/app/static/static.module.js"></script>
+<script src="NG/app/static/contact/contact.component.js"></script>
+<script src="NG/app/static/profile/profile.component.js"></script>
+<script src="NG/app/static/error/error.component.js"></script>
+
+<script src="NG/app/todo/todo.module.js"></script>
+<script src="NG/app/todo/todo.service.js"></script>
+<script src="NG/app/todo/todoList/todoList.component.js"></script>
+
+<script src="NG/app/appModule/app.module.js"></script>
+<script src="NG/app/appModule/appComponent/app.component.js"></script>
 
 
 
 </head>
 <body>
-<div class="container">
-    <app-component>Loading...</app-component>
+	<div class="container">
+		<app-component>Loading...</app-component>
 
-  <!-- jQuery first, then Bootstrap JS. -->
-  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  </div>
+		<!-- jQuery first, then Bootstrap JS. -->
+		<!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"	integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
+		<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> -->
+		<!-- <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>  -->
+		<script src="JS/tether.min.js"></script>
+		<script src="JS/jquery-3.2.1.slim.min.js"></script>
+		<script src="JS/bootstrap.min.js"></script>
+	</div>
 </body>
 </html>
