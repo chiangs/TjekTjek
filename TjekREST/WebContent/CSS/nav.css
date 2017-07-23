@@ -7,7 +7,11 @@
 }
 
 .newTask {
-	background-color: #d50000;
+	background-color: #0091ea;
 	border-radius: 1%;
 	font-weight: bold;
+}
+
+.navbar-nav {
+	padding-right: 50px;
 }
