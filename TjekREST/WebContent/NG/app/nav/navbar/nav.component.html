@@ -1,9 +1,9 @@
 <!-- Begin Navbar -->
-<nav ng-show="vm.isLoggedIn()" class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-primary">
+<nav ng-show="vm.isLoggedIn()" class="navbar fixed-top navbar-toggleable-md navbar-inverse">
 
 <!-- Collapse Toggler Button -->
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle Navigation">
-		<span class="navbar-toggler-icon"></span>"
+		<span class="navbar-toggler-icon"></span>
 	</button>
 	
 <!-- Collapse Target -->
@@ -14,10 +14,10 @@
 <!-- FuzzySearch Form -->
 		<form class="form-inline my-2 my-lg-0">
 			<input class="form-control mr-sm-2" type="text" placeholder="Søg">
-		</form>
-		<button type="submit" class="btn btn-success" ng-click="vm.showNewTodoForm">Opret en ny opgave</button>
+ 		</form>
 		
 		<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+			<li class="nav-item" ng-click="vm.showNewTodoForm"><a class="nav-link newTask" href="">Ny Opgave +</a></li>
 			<li class="nav-item"><a class="nav-link" href="#/todo">Hjem</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">Statistik</a></li>
 			<li class="nav-item dropdown">
