@@ -27,3 +27,4 @@ View Data Stats
 2. View Hello, username
 3. View other performance data points?
 4. Chars.JS?
+5. Update font Awesome and google fonts
