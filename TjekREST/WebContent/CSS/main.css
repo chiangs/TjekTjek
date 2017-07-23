@@ -4,13 +4,30 @@
 
 * h1 {
     font-family: 'Raleway', sans-serif;
-    font-weight: bold;
 }
 
 * h2, h3, h4, p, a, blockquote {
     font-family: 'Quicksand', serif;
 }
 
+a {
+	color: #ff9100;
+}
+
 body {
+	background-color: #607d8b;
     padding: 50px 0 0 0;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.icon {
+	border-radius: 50%;
+}
+
+.modal-content {
+	background-color: #263238;
+	color: #fff;
 }

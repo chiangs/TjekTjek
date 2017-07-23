@@ -8,7 +8,9 @@
 	
 <!-- Collapse Target -->
 	<div class="collapse navbar-collapse" id="navbarLinks">
-		<a class="navbar-brand" href="#">TjekTjek</a> 
+		<a class="navbar-brand" href="/"><img id="navicon" class="icon" src="./Images/todo.png">&nbsp;&nbsp;TjekTjek</a>
+		
+		 
 <!-- FuzzySearch Form -->
 		<form class="form-inline my-2 my-lg-0">
 			<input class="form-control mr-sm-2" type="text" placeholder="Søg">
@@ -33,7 +35,7 @@
 	</div>			
 </nav>
 
-<div id="newTaskForm"> // make this a modal?
+<div id="newTaskForm"> <!-- make this a modal? -->
 	<form ng-show="vm.showNewTodoForm">
 		<input class="newTaskInput" type="text" ng-model="todos.task" placeholder="Task Name"/><br>
 		<input class="newTaskInput" type="text" ng-model="todos.description" placeholder="Task Description"/><br>

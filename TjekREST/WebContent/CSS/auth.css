@@ -1,0 +1,19 @@
+#landing-icon {
+	max-height: 80px;
+	position: absolute;
+	left: -30px;
+	top: -30px;;
+}
+
+#authButtons {
+	text-align: right;
+}
+
+.help {
+	font-size: 1.5vh;
+}
+
+.btn {
+	width: 100%;
+	border-radius: 1px;
+}
