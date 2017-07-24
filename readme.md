@@ -24,7 +24,7 @@ Search
 
 View Data Stats
 1. View totals
-2. View Hello, username
+2. View Hello, username and welcome message: Velkommen, Supreme Allied Commander of	Incomplete Task Annihilation Forces
 3. View other performance data points?
 4. Chars.JS?
 5. Update font Awesome and google fonts
