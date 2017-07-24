@@ -18,11 +18,3 @@
 	border-radius: 1px;
 }
 
-.modal-dialog {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-    transition: 0.3s;
-}
-
-.modal-dialog:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
-}

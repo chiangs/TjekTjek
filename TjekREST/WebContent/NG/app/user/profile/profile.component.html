@@ -1,23 +1,21 @@
-<div class="modal-content">
+<div class="modal-content" id="userUpdate">
 	<div class="modal-heading">
 		<h2 class="text-center">Opdater kontooplysninger</h2>
 		<div class="modal-body">
 			<form class="form" id="modal-reg">
 				<div class="form-group">
 					<div class="input-group">
-						<span class="input-group-addon"> <span
-							class="glyphicon glyphicon-user"></span>
-						</span> <input type="email" class="form-control"
+						<span class="input-group-addon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
+						<input type="email" class="form-control"
 							ng-model="vm.userUpdate.email" placeholder={{vm.user.email}}
 							required>
 					</div>
 				</div>
-	
+				
 				<div class="form-group">
 						<div class="input-group">
-							<span class="input-group-addon"> <span
-								class="glyphicon glyphicon-user"></span>
-							</span> <input type="password" class="form-control" ng-model="vm.userUpdate.password" placeholder="Change password here" required>
+							<span class="input-group-addon"><i class="fa fa-asterisk" aria-hidden="true"></i></span>
+							<input type="password" class="form-control" ng-model="vm.userUpdate.password" placeholder="Change password here" required>
 						</div>
 					</div>
 
@@ -25,14 +23,13 @@
 					<button type="submit" class="btn btn-primary btn-lg"
 						ng-click="vm.update(vm.userUpdate)">Tilføje</button>
 				</div>
-
 			</form>
 		</div>
 	</div>
+	<div class="form-group" id="deactivateButton">
+		<button type="submit" class="btn btn-danger btn-lg"
+			ng-click="vm.deactivate()">Slet konto</button>
+	</div>
 </div>
 
-<div class="form-group">
-	<button type="submit" class="btn btn-danger btn-lg"
-		ng-click="vm.deactivate()">Slet konto</button>
-</div>
 

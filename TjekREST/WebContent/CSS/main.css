@@ -28,7 +28,6 @@ body {
 }
 
 .modal-dialog {
-	border-radius: 1%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
     transition: 0.3s;
 }
@@ -38,6 +37,21 @@ body {
 }
 
 .modal-content {
+	border-radius: 0%;
+	border-style: solid 0px;
 	background-color: #263238;
 	color: #fff;
 }
+
+.input-group-addon {
+	border: .5px solid #ECEEEF !important;
+}
+
+input {
+	border: .5px solid #f7f7f7 !important;
+}
+
+input:focus {
+	border: .5px solid #d50000 !important;
+}
+

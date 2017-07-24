@@ -1,0 +1,18 @@
+#userUpdate {
+	width: 65%;
+	margin: 0 auto;
+	position: relative;
+	bottom: -20vh;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+#userUpdate:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+#deactivateButton {
+	width: 30%;
+	margin: 0 auto;
+	padding-bottom: 10px;
+}

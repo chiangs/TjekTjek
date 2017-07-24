@@ -6,20 +6,16 @@
 			<div class="modal-body">
 				<form class="form" id="modal-login">
 					<div class="form-group"><h3>Email</h3>
-						<div class="input-group">
-							<span class="input-group-addon"> <span
-								class="glyphicon glyphicon-user"></span>
-							</span> <input type="email" class="form-control"
-								placeholder="email@mail.com" ng-model="user.email" required>
+						<div class="input-group input-group-lg">
+							<span class="input-group-addon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span> 
+							<input type="email" class="form-control" placeholder="email@mail.com" ng-model="user.email" required>
 						</div>
 					</div>
 					
 					<div class="form-group"><h3>Password</h3>
-						<div class="input-group">
-							<span class="input-group-addon"> <span
-								class="glyphicon glyphicon-user"></span>
-							</span> <input type="{{ vm.showPassword ? 'text' : 'password' }}" class="form-control"
-								placeholder="adgangskode" ng-model="user.password" required>
+						<div class="input-group input-group-lg">
+							<span class="input-group-addon"><i class="fa fa-asterisk" aria-hidden="true"></i></span>
+							<input type="{{ vm.showPassword ? 'text' : 'password' }}" class="form-control" placeholder="adgangskode" ng-model="user.password" required>
 						</div>
 					</div>
 					
@@ -28,7 +24,7 @@
 						<button type="submit" class="btn btn-danger btn-md" ng-click="vm.showRegFormButton()">Opret en konto</button><br>
 					</div>
 					
-					<a class="help" href="mailto:stephen.e.chiang@gmail.com" target="_blank">Har du brug for hjælp? Klik her for forstærkninger!</a>		
+					<a class="help" href="mailto:stephen.e.chiang@gmail.com">Har du brug for hjælp? Klik her for forstærkninger!</a>		
 				</form>
 			</div>
 		</div>
@@ -42,20 +38,16 @@
 			<div class="modal-body">
 				<form class="form" id="modal-reg">
 					<div class="form-group">
-						<div class="input-group">
-							<span class="input-group-addon"> <span
-								class="glyphicon glyphicon-user"></span>
-							</span> <input type="email" class="form-control"
-								placeholder="Bruger Email Adresse" ng-model="user.email" required>
+						<div class="input-group input-group-lg">
+							<span class="input-group-addon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
+							<input type="email" class="form-control" placeholder="Bruger Email Adresse" ng-model="user.email" required>
 						</div>
 					</div>
 					
 					<div class="form-group">
-						<div class="input-group">
-							<span class="input-group-addon"> <span
-								class="glyphicon glyphicon-user"></span>
-							</span> <input type="password" class="form-control"
-								placeholder="Adgangskode" ng-model="user.password" required>
+						<div class="input-group input-group-lg">
+							<span class="input-group-addon"><i class="fa fa-asterisk" aria-hidden="true"></i></span>
+							<input type="password" class="form-control" placeholder="Adgangskode" ng-model="user.password" required>
 						</div>
 					</div>
 					

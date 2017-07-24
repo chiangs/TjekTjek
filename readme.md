@@ -28,3 +28,6 @@ View Data Stats
 3. View other performance data points?
 4. Chars.JS?
 5. Update font Awesome and google fonts
+
+Misc UI/UX
+1. ? icon to flip open help modal from anywhere
